@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float moveDist = 1f;
+
 
     public bool is_up = true;     // 캐릭터가 라인 위에 있을때
     public bool is_down = false;  // 캐릭터가 라인 아래에 있을때
@@ -39,8 +38,7 @@ public class CharacterController2D : MonoBehaviour
         {
             if (is_left || is_right || is_side)
             {
-                if (!is_fall)
-                    transform.position = new Vector2(transform.position.x, transform.position.y + moveDist);
+                
 
                 if (is_up && dir_right)
                 {
@@ -64,7 +62,7 @@ public class CharacterController2D : MonoBehaviour
             if (is_down && !is_mid)
             {
                 is_mid = true;
-                moveDist = 0f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
             }
             else if (is_down && is_mid)
@@ -72,19 +70,19 @@ public class CharacterController2D : MonoBehaviour
                 is_mid = false;
                 is_down = false;
                 is_up = true;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
             }
             else if (is_mid && !is_right && !is_left)
             {
                 is_mid = false;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
             }
 
             if(is_up && is_jump)
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y + moveDist);
+                transform.position = new Vector2(transform.position.x, transform.position.y + 1f);
                 is_up = false;
                 is_down = true;
             }
@@ -95,9 +93,6 @@ public class CharacterController2D : MonoBehaviour
         {
             if (is_left || is_right || is_side)
             {
-                if (!is_fall)
-                    transform.position = new Vector3(transform.position.x, transform.position.y - moveDist);
-
                 if (is_down && dir_right)
                 {
                     is_down = false;
@@ -120,7 +115,7 @@ public class CharacterController2D : MonoBehaviour
             if (is_up && !is_mid)
             {
                 is_mid = true;
-                moveDist = 0f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
             }
             else if (is_up && is_mid)
@@ -128,19 +123,19 @@ public class CharacterController2D : MonoBehaviour
                 is_mid = false;
                 is_up = false;
                 is_down = true;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
             }
             else if (is_mid && !is_right && !is_left)
             {
                 is_mid = false;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
             }
 
             if (is_down && is_jump)
             {
-                transform.position = new Vector2(transform.position.x, transform.position.y - moveDist);
+                transform.position = new Vector2(transform.position.x, transform.position.y - 1f);
                 is_down = false;
                 is_up = true;
             }
@@ -150,9 +145,6 @@ public class CharacterController2D : MonoBehaviour
         {
             if (is_up || is_down || is_side)
             {
-                if (!is_fall)
-                    transform.position = new Vector3(transform.position.x - moveDist, transform.position.y);
-
                 if (is_left && dir_up)
                 {
                     is_left = false;
@@ -175,7 +167,7 @@ public class CharacterController2D : MonoBehaviour
             if (is_right && !is_mid)
             {
                 is_mid = true;
-                moveDist = 0f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
             }
             else if (is_right && is_mid)
@@ -183,20 +175,20 @@ public class CharacterController2D : MonoBehaviour
                 is_mid = false;
                 is_right = false;
                 is_left = true;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
             }
             else if (is_mid && !is_up && !is_down)
             {
                 is_mid = false;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
             }
 
 
             if (is_left && is_jump)
             {
-                transform.position = new Vector2(transform.position.x - moveDist, transform.position.y);
+                transform.position = new Vector2(transform.position.x - 1f, transform.position.y);
                 is_left = false;
                 is_right = true;
             }
@@ -206,9 +198,6 @@ public class CharacterController2D : MonoBehaviour
         {
             if (is_up || is_down || is_side)
             {
-                if (!is_fall)
-                    transform.position = new Vector3(transform.position.x + moveDist, transform.position.y);
-
                 if (is_right && dir_up)
                 {
                     is_right = false;
@@ -231,7 +220,7 @@ public class CharacterController2D : MonoBehaviour
             if (is_left && !is_mid)
             {
                 is_mid = true;
-                moveDist = 0f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
             }
             else if (is_left && is_mid)
@@ -239,19 +228,19 @@ public class CharacterController2D : MonoBehaviour
                 is_mid = false;
                 is_left = false;
                 is_right = true;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
             }
             else if (is_mid && !is_up && !is_down)
             {
                 is_mid = false;
-                moveDist = 1f;
+                GameObject.Find("Player").GetComponent<CharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
             }
 
             if (is_right && is_jump)
             {
-                transform.position = new Vector2(transform.position.x + moveDist, transform.position.y);
+                transform.position = new Vector2(transform.position.x + 1f, transform.position.y);
                 is_right = false;
                 is_left = true;
             }

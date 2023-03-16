@@ -1064,6 +1064,7 @@ GameObject:
   - component: {fileID: 1207118941}
   - component: {fileID: 1207118940}
   - component: {fileID: 1207118939}
+  - component: {fileID: 1207118942}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1137,6 +1138,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1207118942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207118938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f65b2883e2129c4c995513d5ea21ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1375956445}
+  zoomSpeed: 1
+  originalSize: 5
+  minSize: 2
+  maxSize: 10
 --- !u!1 &1375956442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1168,7 @@ GameObject:
   - component: {fileID: 1375956443}
   - component: {fileID: 1375956446}
   - component: {fileID: 1375956447}
+  - component: {fileID: 1375956448}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1260,8 +1279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7ee0bba98c5d1448f15910ca3454db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveDist: 1
   is_up: 1
   is_down: 0
   is_right: 0
@@ -1285,6 +1302,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 1375956442}
+--- !u!114 &1375956448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375956442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e744b365e808b4d8e407063aa687a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p: {fileID: 1375956442}
+  moveSpeed: 5
+  moveDist: 1
 --- !u!1 &1539532205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1589,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.92218, y: 0.8182297}
+  m_Offset: {x: -4.049165, y: 0.81165195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1568,7 +1600,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49643755, y: 0.16073179}
+  m_Size: {x: 0.10652876, y: 0.17388725}
   m_EdgeRadius: 0
 --- !u!114 &1695774745
 MonoBehaviour:
@@ -1628,7 +1660,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.8870115, y: -0.1536656}
+  m_Offset: {x: -6.8893356, y: -0.24929464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1639,7 +1671,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1525116, y: 0.45052916}
+  m_Size: {x: 0.08783674, y: 0.17906547}
   m_EdgeRadius: 0
 --- !u!114 &2039437104
 MonoBehaviour:
