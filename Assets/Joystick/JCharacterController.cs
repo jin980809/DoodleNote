@@ -18,21 +18,17 @@ public class JCharacterController : MonoBehaviour
     public bool is_mid = false;
     public bool is_jump = false;
 
-    // 한칸씩 이동하는 것 구현 o 
-    // 위에 있는 bool변수의 경우의 수마다 로테이션 넣어주기 o
-    // 사이드 감지 및 사이드 있을때만 방행 전환 o 
-    // 떨어짐 감지 o
-    // 각 라인마다 상태 1 ~ 3 구현 o
-
     private GameObject Joystick;
     private GameObject P;
-    public bool is_click;
+
+    Animator Anim;
 
     void Start()
     {
         Joystick = GameObject.Find("JoyStick");
         P = GameObject.Find("Player");
-        is_click = true;
+        Anim = GetComponent<Animator>();
+        Joystick.GetComponent<Joystick>().is_click = true;
     }
 
     void Update()
@@ -42,8 +38,12 @@ public class JCharacterController : MonoBehaviour
 
         if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert))
         {
-            if (is_left || is_right || is_side)
+            if ((is_left || is_right || is_side ) && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_Walk", true);
+
+                Joystick.GetComponent<Joystick>().is_click = false;
+
                 if (is_up && dir_right)
                 {
                     is_up = false;
@@ -63,15 +63,15 @@ public class JCharacterController : MonoBehaviour
                 }
             }
 
-            if (is_down && !is_mid && is_click)
+            if (is_down && !is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = true;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_down && is_mid && is_click)
+            else if (is_down && is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 is_down = false;
@@ -79,33 +79,35 @@ public class JCharacterController : MonoBehaviour
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_mid && !is_right && !is_left && is_click)
+            else if (is_mid && !is_right && !is_left && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
 
-            if (is_up && is_jump && is_click)
+            if (is_up && is_jump && Joystick.GetComponent<Joystick>().is_click)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y + 1f);
                 is_up = false;
                 is_down = true;
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
 
         }
 
         else if (Vert < 0 && (-1 * Vert > Hori && Hori > Vert))
         {
-
-            if (is_left || is_right || is_side)
+            if ((is_left || is_right || is_side) && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_Walk", true);
+                Joystick.GetComponent<Joystick>().is_click = false;
+
                 if (is_down && dir_right)
                 {
                     is_down = false;
@@ -125,47 +127,63 @@ public class JCharacterController : MonoBehaviour
                 }
             }
 
-            if (is_up && !is_mid && is_click)
+            if (is_up && !is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_MidDown", true);
+                Anim.SetBool("Is_Walk", false);
+                Anim.SetBool("Is_Idle", false);
+
                 is_mid = true;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_up && is_mid && is_click)
+            else if (is_up && is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_MidDown", false);
+                Anim.SetBool("Is_MidUp", true);
+                Anim.SetBool("Is_Idle", true);
+
                 is_mid = false;
                 is_up = false;
                 is_down = true;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_mid && !is_right && !is_left && is_click)
+            else if (is_mid && !is_right && !is_left && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_MidDown", false);
+                Anim.SetBool("Is_MidUp", true);
+                Anim.SetBool("Is_Idle", true);
+
                 is_mid = false;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
 
-            if (is_down && is_jump && is_click)
+
+            if (is_down && is_jump && Joystick.GetComponent<Joystick>().is_click)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y - 1f);
                 is_down = false;
                 is_up = true;
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
         }
 
         else if (Hori < 0 && (-1 * Hori > Vert && Vert > Hori))
         {
-            if (is_up || is_down || is_side)
+            if ((is_up || is_down || is_side) && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_Walk", true);
+                Joystick.GetComponent<Joystick>().is_click = false;
+
                 if (is_left && dir_up)
                 {
                     is_left = false;
@@ -185,15 +203,15 @@ public class JCharacterController : MonoBehaviour
                 }
             }
 
-            if (is_right && !is_mid && is_click)
+            if (is_right && !is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = true;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_right && is_mid && is_click)
+            else if (is_right && is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 is_right = false;
@@ -201,32 +219,35 @@ public class JCharacterController : MonoBehaviour
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_mid && !is_up && !is_down && is_click)
+            else if (is_mid && !is_up && !is_down && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
 
 
-            if (is_left && is_jump && is_click)
+            if (is_left && is_jump && Joystick.GetComponent<Joystick>().is_click)
             {
                 transform.position = new Vector2(transform.position.x - 1f, transform.position.y);
                 is_left = false;
                 is_right = true;
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
         }
 
         else if (Hori > 0 && (-1 * Hori < Vert && Vert < Hori))
-        {
-            if (is_up || is_down || is_side)
+        { 
+            if ((is_up || is_down || is_side) && Joystick.GetComponent<Joystick>().is_click)
             {
+                Anim.SetBool("Is_Walk", true);
+                Joystick.GetComponent<Joystick>().is_click = false;
+
                 if (is_right && dir_up)
                 {
                     is_right = false;
@@ -246,15 +267,15 @@ public class JCharacterController : MonoBehaviour
                 }
             }
 
-            if (is_left && !is_mid && is_click)
+            if (is_left && !is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = true;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 0f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_left && is_mid && is_click)
+            else if (is_left && is_mid && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 is_left = false;
@@ -262,25 +283,29 @@ public class JCharacterController : MonoBehaviour
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
-            else if (is_mid && !is_up && !is_down && is_click)
+            else if (is_mid && !is_up && !is_down && Joystick.GetComponent<Joystick>().is_click)
             {
                 is_mid = false;
                 P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
                 transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y);
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
 
-            if (is_right && is_jump && is_click)
+            if (is_right && is_jump && Joystick.GetComponent<Joystick>().is_click)
             {
                 transform.position = new Vector2(transform.position.x + 1f, transform.position.y);
                 is_right = false;
                 is_left = true;
 
-                is_click = false;
+                Joystick.GetComponent<Joystick>().is_click = false;
             }
+        }
+        else
+        {
+            Anim.SetBool("Is_Walk", false);
         }
     }
 }

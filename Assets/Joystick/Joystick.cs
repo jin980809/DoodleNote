@@ -19,12 +19,15 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     private GameObject jst;
     private GameObject P;
 
+    public bool is_click;
+
     void Start()
     {
         jst = GameObject.Find("Joystick");
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         outLine = jst.gameObject.GetComponent<RectTransform>();
         P = GameObject.Find("Player");
+        is_click = false;
 
         jst.SetActive(false);
     }
@@ -86,7 +89,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
         handle.anchoredPosition = input * outLine.sizeDelta;
         jst.SetActive(false);
         //Debug.Log("Click up");
-        P.GetComponent<JCharacterController>().is_click = true;
+        is_click = true;
     }
 
 }
