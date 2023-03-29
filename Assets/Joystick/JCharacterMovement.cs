@@ -19,6 +19,7 @@ public class JCharacterMovement : MonoBehaviour
         float Hori = joystick.GetComponent<Joystick>().Horizontal;
         float Vert = joystick.GetComponent<Joystick>().Vertical;
 
+
         if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert) && p.GetComponent<JCharacterController>().dir_up)
         {
             if ((p.GetComponent<JCharacterController>().is_left || p.GetComponent<JCharacterController>().is_right || p.GetComponent<JCharacterController>().is_side))
