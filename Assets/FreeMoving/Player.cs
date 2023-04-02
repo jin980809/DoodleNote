@@ -5,11 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
-    private Joystick joystick;
+    private FreeJoystick joystick;
 
     void Awake()
     {
-        joystick = GameObject.FindObjectOfType<Joystick>();
+        joystick = GameObject.FindObjectOfType<FreeJoystick>();
     }
 
     void FixedUpdate()

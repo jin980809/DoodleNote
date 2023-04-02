@@ -25,6 +25,7 @@ public class JCharacterRotation : MonoBehaviour
                 p.transform.eulerAngles = new Vector3(0, 180, 0);
             }
         }
+
         if (JCP.is_down)
         {
             if (JCP.dir_right)
