@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class SideCheckTrigger : MonoBehaviour
 {
+    private CharacterColorState ccs;
+
+    void Start()
+    {
+        ccs = GetComponent<CharacterColorState>();
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Line")

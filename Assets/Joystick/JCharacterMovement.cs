@@ -20,41 +20,41 @@ public class JCharacterMovement : MonoBehaviour
         float Vert = joystick.GetComponent<Joystick>().Vertical;
 
 
-        if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert) && p.GetComponent<JCharacterController>().dir_up)
+        if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert) && p.GetComponent<JCharacterController>().dir_up && joystick.GetComponent<Joystick>().is_click)
         {
             if ((p.GetComponent<JCharacterController>().is_left || p.GetComponent<JCharacterController>().is_right || p.GetComponent<JCharacterController>().is_side))
             {
-                if (!p.GetComponent<JCharacterController>().is_fall)
+                if (!p.GetComponent<JCharacterController>().is_fall && !p.GetComponent<JCharacterController>().is_side)
                 {
                     transform.position += Vector3.up * moveSpeed * Time.deltaTime * Vert;
                 }
             }
         }
-        else if (Vert < 0 && (-1 * Vert > Hori && Hori > Vert) && !p.GetComponent<JCharacterController>().dir_up)
+        else if (Vert < 0 && (-1 * Vert > Hori && Hori > Vert) && !p.GetComponent<JCharacterController>().dir_up && joystick.GetComponent<Joystick>().is_click)
         {
             if (p.GetComponent<JCharacterController>().is_left || p.GetComponent<JCharacterController>().is_right || p.GetComponent<JCharacterController>().is_side)
             {
-                if (!p.GetComponent<JCharacterController>().is_fall)
+                if (!p.GetComponent<JCharacterController>().is_fall && !p.GetComponent<JCharacterController>().is_side)
                 {
                     transform.position += Vector3.up * moveSpeed * Time.deltaTime * Vert;
                 }
             }
         }
-        else if (Hori < 0 && (-1 * Hori > Vert && Vert > Hori) && !p.GetComponent<JCharacterController>().dir_right)
+        else if (Hori < 0 && (-1 * Hori > Vert && Vert > Hori) && !p.GetComponent<JCharacterController>().dir_right && joystick.GetComponent<Joystick>().is_click)
         {
             if (p.GetComponent<JCharacterController>().is_up || p.GetComponent<JCharacterController>().is_down || p.GetComponent<JCharacterController>().is_side)
             {
-                if (!p.GetComponent<JCharacterController>().is_fall)
+                if (!p.GetComponent<JCharacterController>().is_fall && !p.GetComponent<JCharacterController>().is_side)
                 {
                     transform.position += Vector3.right * moveSpeed * Time.deltaTime * Hori;
                 }
             }
         }
-        else if (Hori > 0 && (-1 * Hori < Vert && Vert < Hori) && p.GetComponent<JCharacterController>().dir_right)
+        else if (Hori > 0 && (-1 * Hori < Vert && Vert < Hori) && p.GetComponent<JCharacterController>().dir_right && joystick.GetComponent<Joystick>().is_click)
         {
             if (p.GetComponent<JCharacterController>().is_up || p.GetComponent<JCharacterController>().is_down || p.GetComponent<JCharacterController>().is_side)
             {
-                if (!p.GetComponent<JCharacterController>().is_fall)
+                if (!p.GetComponent<JCharacterController>().is_fall && !p.GetComponent<JCharacterController>().is_side)
                 {
                     transform.position += Vector3.right * moveSpeed * Time.deltaTime * Hori;
                 }

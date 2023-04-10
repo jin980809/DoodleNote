@@ -61,7 +61,6 @@ public class FreeJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoi
             }
         }
     }
-
     public void OnPointerUp(PointerEventData eventData)
     {
         input = Vector2.zero;

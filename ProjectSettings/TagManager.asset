@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Line
   - StartPoint
+  - Lever
+  - RedLine
+  - OrangeLine
+  - YellowLine
+  - GreenLine
+  - BlueLine
+  - PurpleLine
   layers:
   - Default
   - TransparentFX
