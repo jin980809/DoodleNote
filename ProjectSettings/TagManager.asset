@@ -57,3 +57,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2358438647
+    locked: 0
+  - name: Player
+    uniqueID: 2153205387
+    locked: 0
+  - name: Line
+    uniqueID: 3507191977
+    locked: 0
+  - name: Crayon
+    uniqueID: 3745366517
+    locked: 0
