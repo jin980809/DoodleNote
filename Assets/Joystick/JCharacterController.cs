@@ -21,8 +21,8 @@ public class JCharacterController : MonoBehaviour
 
     public bool Anim_End = true;
 
-    private GameObject Joystick;
-    private GameObject P;
+    static private GameObject Joystick;
+    static private GameObject P;
 
     Animator Anim;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterColorState : MonoBehaviour
 {
+    Animator Anim;
+
     public enum ColorState
     {
         Origin = 0,
@@ -21,45 +23,82 @@ public class CharacterColorState : MonoBehaviour
 
     void Start()
     {
+        Anim = this.GetComponent<Animator>();
         currentColor = ColorState.Origin;
     }
 
     void Update()
     {
-        SetColor();
+        //SetColor();
     }
 
     // Method to set the character's color based on the current color state
-    void SetColor()
+    public void SetColor()
     {
         switch (currentColor)
         {
             case ColorState.Origin:
-                GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 1, 1);
+                
                 break;
 
             case ColorState.Red:
-                GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 0, 1);
+                Anim.SetBool("is_red", true);
                 break;
 
             case ColorState.Orange:
-                GetComponent<SpriteRenderer>().material.color = new Color(1, 0.5f, 0, 1);
+                
                 break;
 
             case ColorState.Yellow:
-                GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 0, 1);
+                
                 break;
 
             case ColorState.Green:
-                GetComponent<SpriteRenderer>().material.color = new Color(0, 1, 0, 1);
+                
                 break;
 
             case ColorState.Blue:
-                GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 1, 1);
+
                 break;
 
             case ColorState.Purple:
-                GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 1, 1);
+                
+                break;
+        }
+    }
+
+    void Anim_End()
+    {
+        Anim.SetBool("is_red", false);
+
+        switch (currentColor)
+        {
+            case ColorState.Origin:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 1, 1);
+                break;
+
+            case ColorState.Red:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 0, 1);
+                break;
+
+            case ColorState.Orange:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 0.5f, 0, 1);
+                break;
+
+            case ColorState.Yellow:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 0, 1);
+                break;
+
+            case ColorState.Green:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(0, 1, 0, 1);
+                break;
+
+            case ColorState.Blue:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 1, 1);
+                break;
+
+            case ColorState.Purple:
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 1, 1);
                 break;
         }
     }

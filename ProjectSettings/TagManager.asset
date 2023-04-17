@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Line
   - StartPoint
   - Lever
   - RedLine
@@ -13,6 +12,14 @@ TagManager:
   - GreenLine
   - BlueLine
   - PurpleLine
+  - OriginLine
+  - UpPotal
+  - DownPotal
+  - RightPotal
+  - LeftPotal
+  - Box
+  - Line
+  - Button
   layers:
   - Default
   - TransparentFX
