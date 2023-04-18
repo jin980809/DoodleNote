@@ -19,11 +19,6 @@ public class BoxController : MonoBehaviour
         {
             Vector3 pos = other.transform.position + other.transform.right * 0.8f;
             transform.parent.position = pos;
-            JCM.moveSpeed = 1.0f;
-        }
-        else
-        {
-            JCM.moveSpeed = 5.0f;
         }
 
     }

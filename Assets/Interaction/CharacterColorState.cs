@@ -46,23 +46,23 @@ public class CharacterColorState : MonoBehaviour
                 break;
 
             case ColorState.Orange:
-                
+                Anim.SetBool("is_orange", true);
                 break;
 
             case ColorState.Yellow:
-                
+                Anim.SetBool("is_yellow", true);
                 break;
 
             case ColorState.Green:
-                
+                Anim.SetBool("is_green", true);
                 break;
 
             case ColorState.Blue:
-
+                Anim.SetBool("is_blue", true);
                 break;
 
             case ColorState.Purple:
-                
+                Anim.SetBool("is_purple", true);
                 break;
         }
     }
@@ -70,6 +70,11 @@ public class CharacterColorState : MonoBehaviour
     void Anim_End()
     {
         Anim.SetBool("is_red", false);
+        Anim.SetBool("is_orange", false);
+        Anim.SetBool("is_yellow", false);
+        Anim.SetBool("is_green", false);
+        Anim.SetBool("is_blue", false);
+        Anim.SetBool("is_purple", false);
 
         switch (currentColor)
         {
@@ -98,7 +103,7 @@ public class CharacterColorState : MonoBehaviour
                 break;
 
             case ColorState.Purple:
-                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 1, 1);
+                this.transform.parent.GetComponent<SpriteRenderer>().material.color = new Color(0.3529412f, 0.02352941f, 0.6745098f, 1);
                 break;
         }
     }
