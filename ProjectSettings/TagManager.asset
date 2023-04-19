@@ -63,6 +63,9 @@ TagManager:
   - name: Player
     uniqueID: 2153205387
     locked: 0
+  - name: Box
+    uniqueID: 1168643545
+    locked: 0
   - name: Line
     uniqueID: 3507191977
     locked: 0

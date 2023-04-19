@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class BoxFallCheck : MonoBehaviour
 {
-    [SerializeField] private CrayonUI Crayon_UI;
-    private BoxController BC;
+    [SerializeField] private BoxController BC;
 
     void Start()
     {
-        Crayon_UI = GameObject.Find("CrayonButton").GetComponent<CrayonUI>();
-        BC = GameObject.Find("Interaction").GetComponent<BoxController>();
     }
+
+    /*private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("OriginLine") || Crayon_UI.Line_tag.ToString() == other.tag)
+        {
+            BC.is_fall = false;
+        }
+    }*/
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("OriginLine") || Crayon_UI.Line_tag.ToString() == other.tag)
+        bool is_true;
+        is_true = other.CompareTag("OriginLine") ||
+            other.CompareTag("RedLine") ||
+            other.CompareTag("OrangeLine") ||
+            other.CompareTag("YellowLine") ||
+            other.CompareTag("GreenLine") ||
+            other.CompareTag("BlueLine") ||
+            other.CompareTag("PurpleLine");
+
+
+        if (is_true)
         {
             BC.is_fall = false;
         }
@@ -23,7 +38,17 @@ public class BoxFallCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("OriginLine") || Crayon_UI.Line_tag.ToString() == other.tag)
+        bool is_true;
+        is_true = other.CompareTag("OriginLine") ||
+            other.CompareTag("RedLine") ||
+            other.CompareTag("OrangeLine") ||
+            other.CompareTag("YellowLine") ||
+            other.CompareTag("GreenLine") ||
+            other.CompareTag("BlueLine") ||
+            other.CompareTag("PurpleLine");
+
+
+        if (is_true)
         {
             BC.is_fall = true;
         }
