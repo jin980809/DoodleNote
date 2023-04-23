@@ -369,7 +369,11 @@ public class JCharacterController : MonoBehaviour
         {
             Anim.SetBool("Is_Walk", false);
             Anim.SetBool("Is_Idle", true);
-            Anim_End = true;
+            if(!is_mid)
+            {
+                Anim_End = true;
+            }
+            
             is_walk = false;
             Joystick.GetComponent<Joystick>().is_click = true;
 
@@ -385,6 +389,7 @@ public class JCharacterController : MonoBehaviour
             P.GetComponent<JCharacterMovement>().moveSpeed = 5f;
         }
     }
+
 
     public void JumpEnd()
     {

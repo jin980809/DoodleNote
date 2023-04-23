@@ -22,8 +22,7 @@ public class DataManager : MonoBehaviour
     {
         levelProgressDictionary = new Dictionary<EThema, int>();
         levelProgressData = new LevelProgressData();
-        _saveDataPath = Application.dataPath + "/Save/";
-
+        _saveDataPath = Application.persistentDataPath + "/Save/";
         if(!Directory.Exists(_saveDataPath))
         {
             Directory.CreateDirectory(_saveDataPath);
