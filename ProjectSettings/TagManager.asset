@@ -41,6 +41,8 @@ TagManager:
   - YellowLine
   - GreenLine
   - BLACK
+  - LobbyRoad
+  - Rides
   layers:
   - Default
   - TransparentFX
@@ -80,6 +82,9 @@ TagManager:
     locked: 0
   - name: BackGround
     uniqueID: 2358438647
+    locked: 0
+  - name: BackObject
+    uniqueID: 2187721599
     locked: 0
   - name: Player
     uniqueID: 2153205387

@@ -6,12 +6,13 @@ public class PotalLeverController : MonoBehaviour
     private bool is_change = false;
 
     [SerializeField]
-    private GameObject Potal;
+    private GameObject Portal;
 
     private Animator Anim;
 
     void Start()
     {
+        Portal.SetActive(false);
         Anim = GetComponent<Animator>();
     }
 
@@ -34,7 +35,6 @@ public class PotalLeverController : MonoBehaviour
 
     void RotateLine()
     {
-
         if (!is_change)
         { 
             is_change = true;
@@ -45,6 +45,6 @@ public class PotalLeverController : MonoBehaviour
         }
 
         Anim.SetBool("is_right", is_change);
-        Potal.SetActive(is_change);
+        Portal.SetActive(is_change);
     }
 }

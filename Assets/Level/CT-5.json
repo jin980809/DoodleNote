@@ -1,0 +1,328 @@
+{
+    "Level_Lines": [
+        {
+            "m_FileID": -32128,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32138,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32148,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32158,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32168,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32178,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32188,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32198,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32228,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32258,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32278,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32288,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32308,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32318,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32338,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32366,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32376,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32396,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32496,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32516,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32536,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32546,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32576,
+            "m_PathID": 0
+        }
+    ],
+    "Level_StartPos": [
+        {
+            "x": -8.5,
+            "y": -1.0
+        },
+        {
+            "x": -7.5,
+            "y": -1.0
+        },
+        {
+            "x": -6.5,
+            "y": -1.0
+        },
+        {
+            "x": -5.5,
+            "y": -1.0
+        },
+        {
+            "x": -4.5,
+            "y": -1.0
+        },
+        {
+            "x": -3.5,
+            "y": -1.0
+        },
+        {
+            "x": -2.5,
+            "y": -1.0
+        },
+        {
+            "x": -1.5,
+            "y": -1.0
+        },
+        {
+            "x": 0.5,
+            "y": -1.0
+        },
+        {
+            "x": 0.5,
+            "y": -1.0
+        },
+        {
+            "x": 0.5,
+            "y": 0.0
+        },
+        {
+            "x": 0.5,
+            "y": 1.0
+        },
+        {
+            "x": 2.5,
+            "y": -1.0
+        },
+        {
+            "x": 3.5,
+            "y": -1.0
+        },
+        {
+            "x": 5.5,
+            "y": -1.0
+        },
+        {
+            "x": -8.5,
+            "y": 0.0
+        },
+        {
+            "x": -7.5,
+            "y": 0.0
+        },
+        {
+            "x": -5.5,
+            "y": 0.0
+        },
+        {
+            "x": -1.5,
+            "y": 0.0
+        },
+        {
+            "x": -0.5,
+            "y": 0.0
+        },
+        {
+            "x": 1.5,
+            "y": 0.0
+        },
+        {
+            "x": 1.5,
+            "y": 0.0
+        },
+        {
+            "x": 1.5,
+            "y": 2.0
+        }
+    ],
+    "Level_EndPos": [
+        {
+            "x": -7.5,
+            "y": -1.0
+        },
+        {
+            "x": -6.5,
+            "y": -1.0
+        },
+        {
+            "x": -5.5,
+            "y": -1.0
+        },
+        {
+            "x": -4.5,
+            "y": -1.0
+        },
+        {
+            "x": -3.5,
+            "y": -1.0
+        },
+        {
+            "x": -2.5,
+            "y": -1.0
+        },
+        {
+            "x": -1.5,
+            "y": -1.0
+        },
+        {
+            "x": -0.5,
+            "y": -1.0
+        },
+        {
+            "x": -0.5,
+            "y": -1.0
+        },
+        {
+            "x": 0.5,
+            "y": 0.0
+        },
+        {
+            "x": 0.5,
+            "y": 1.0
+        },
+        {
+            "x": 0.5,
+            "y": 2.0
+        },
+        {
+            "x": 3.5,
+            "y": -1.0
+        },
+        {
+            "x": 4.5,
+            "y": -1.0
+        },
+        {
+            "x": 4.5,
+            "y": -1.0
+        },
+        {
+            "x": -7.5,
+            "y": 0.0
+        },
+        {
+            "x": -6.5,
+            "y": 0.0
+        },
+        {
+            "x": -6.5,
+            "y": 0.0
+        },
+        {
+            "x": -0.5,
+            "y": 0.0
+        },
+        {
+            "x": 0.5,
+            "y": 0.0
+        },
+        {
+            "x": 0.5,
+            "y": 0.0
+        },
+        {
+            "x": 1.5,
+            "y": 1.0
+        },
+        {
+            "x": 1.5,
+            "y": 1.0
+        }
+    ],
+    "Level_Mats": [
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_PurpleRoundLine (Instance)",
+        "M_PurpleRoundLine (Instance)"
+    ],
+    "Level_ObjectName": [
+        "SignN1(Clone)",
+        "Trashcan(Clone)",
+        "Button(Clone)"
+    ],
+    "Level_ObjPos": [
+        {
+            "x": 5.08830451965332,
+            "y": -0.23152422904968263
+        },
+        {
+            "x": -6.297123908996582,
+            "y": -0.2373504638671875
+        },
+        {
+            "x": -1.8393102884292603,
+            "y": -0.33248651027679446
+        }
+    ]
+}

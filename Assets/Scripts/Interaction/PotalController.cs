@@ -13,10 +13,10 @@ public class PotalController : MonoBehaviour
 
     public bool is_in = false;
 
-    public bool is_up;
-    public bool is_down;
-    public bool is_left;
-    public bool is_right;
+    [HideInInspector] public bool is_up;
+    [HideInInspector] public bool is_down;
+    [HideInInspector] public bool is_left;
+    [HideInInspector] public bool is_right;
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class PotalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !is_in && J_Character.Anim_End)
+        if (collision.CompareTag("Player") && !is_in)
         {
             this.is_in = true;
             toObj.GetComponent<PotalController>().is_in = true;

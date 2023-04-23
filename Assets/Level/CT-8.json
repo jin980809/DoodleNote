@@ -1,0 +1,364 @@
+{
+    "Level_Lines": [
+        {
+            "m_FileID": -32642,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32652,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32662,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32672,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32682,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32692,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32702,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32722,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32972,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32982,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32992,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33002,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33012,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33022,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33052,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33062,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33072,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33082,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33102,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33112,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33142,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33152,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33162,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33172,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33182,
+            "m_PathID": 0
+        }
+    ],
+    "Level_StartPos": [
+        {
+            "x": -9.0,
+            "y": -2.5
+        },
+        {
+            "x": -8.0,
+            "y": -2.5
+        },
+        {
+            "x": -7.0,
+            "y": -2.5
+        },
+        {
+            "x": -6.0,
+            "y": -2.5
+        },
+        {
+            "x": -5.0,
+            "y": -2.5
+        },
+        {
+            "x": -4.0,
+            "y": -2.5
+        },
+        {
+            "x": -3.0,
+            "y": -2.5
+        },
+        {
+            "x": -1.0,
+            "y": -2.5
+        },
+        {
+            "x": -1.0,
+            "y": 0.5
+        },
+        {
+            "x": 0.0,
+            "y": 0.5
+        },
+        {
+            "x": 2.0,
+            "y": 0.5
+        },
+        {
+            "x": -1.0,
+            "y": 1.5
+        },
+        {
+            "x": 0.0,
+            "y": 1.5
+        },
+        {
+            "x": 2.0,
+            "y": 1.5
+        },
+        {
+            "x": -9.0,
+            "y": -1.5
+        },
+        {
+            "x": -8.0,
+            "y": -1.5
+        },
+        {
+            "x": -7.0,
+            "y": -1.5
+        },
+        {
+            "x": -5.0,
+            "y": -1.5
+        },
+        {
+            "x": -1.0,
+            "y": -2.5
+        },
+        {
+            "x": -1.0,
+            "y": -1.5
+        },
+        {
+            "x": -1.0,
+            "y": 0.5
+        },
+        {
+            "x": 2.0,
+            "y": -2.5
+        },
+        {
+            "x": 3.0,
+            "y": -2.5
+        },
+        {
+            "x": 4.0,
+            "y": -2.5
+        },
+        {
+            "x": 6.0,
+            "y": -2.5
+        }
+    ],
+    "Level_EndPos": [
+        {
+            "x": -8.0,
+            "y": -2.5
+        },
+        {
+            "x": -7.0,
+            "y": -2.5
+        },
+        {
+            "x": -6.0,
+            "y": -2.5
+        },
+        {
+            "x": -5.0,
+            "y": -2.5
+        },
+        {
+            "x": -4.0,
+            "y": -2.5
+        },
+        {
+            "x": -3.0,
+            "y": -2.5
+        },
+        {
+            "x": -2.0,
+            "y": -2.5
+        },
+        {
+            "x": -2.0,
+            "y": -2.5
+        },
+        {
+            "x": 0.0,
+            "y": 0.5
+        },
+        {
+            "x": 1.0,
+            "y": 0.5
+        },
+        {
+            "x": 1.0,
+            "y": 0.5
+        },
+        {
+            "x": 0.0,
+            "y": 1.5
+        },
+        {
+            "x": 1.0,
+            "y": 1.5
+        },
+        {
+            "x": 1.0,
+            "y": 1.5
+        },
+        {
+            "x": -8.0,
+            "y": -1.5
+        },
+        {
+            "x": -7.0,
+            "y": -1.5
+        },
+        {
+            "x": -6.0,
+            "y": -1.5
+        },
+        {
+            "x": -6.0,
+            "y": -1.5
+        },
+        {
+            "x": -1.0,
+            "y": -1.5
+        },
+        {
+            "x": -1.0,
+            "y": -0.5
+        },
+        {
+            "x": -1.0,
+            "y": -0.5
+        },
+        {
+            "x": 3.0,
+            "y": -2.5
+        },
+        {
+            "x": 4.0,
+            "y": -2.5
+        },
+        {
+            "x": 5.0,
+            "y": -2.5
+        },
+        {
+            "x": 5.0,
+            "y": -2.5
+        }
+    ],
+    "Level_Mats": [
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_RedRoundLine (Instance)",
+        "M_RedLine (Instance)",
+        "M_RedRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_PurpleRoundLine (Instance)",
+        "M_PurpleLine (Instance)",
+        "M_PurpleLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)"
+    ],
+    "Level_ObjectName": [
+        "SignN1(Clone)",
+        "Player(Clone)",
+        "Button(Clone)",
+        "Trashcan(Clone)",
+        "Lavacorn(Clone)"
+    ],
+    "Level_ObjPos": [
+        {
+            "x": 0.5349189639091492,
+            "y": 2.2961297035217287
+        },
+        {
+            "x": -3.9479727745056154,
+            "y": -1.9588226079940797
+        },
+        {
+            "x": -8.309677124023438,
+            "y": -0.8089564442634583
+        },
+        {
+            "x": -6.8758039474487309,
+            "y": -0.7256993651390076
+        },
+        {
+            "x": 4.5899529457092289,
+            "y": -1.7278668880462647
+        }
+    ]
+}

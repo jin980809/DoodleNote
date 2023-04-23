@@ -44,9 +44,6 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
         Vector2 radius = outLine.sizeDelta / 2;
         input = (eventData.position - outLine.anchoredPosition) / (radius * canvas.scaleFactor);
 
-        //Debug.Log("Drag");
-
-
         if (Vertical > 0 && (-1 * Vertical < Horizontal && Horizontal < Vertical)) // À§
         {
             Horizontal = 0;

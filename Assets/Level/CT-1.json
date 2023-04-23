@@ -1,0 +1,271 @@
+{
+    "Level_Lines": [
+        {
+            "m_FileID": -32118,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32378,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32388,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32398,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32408,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32418,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32428,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32438,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32478,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32488,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32498,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32508,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32528,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32538,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32548,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32558,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32568,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32594,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -32612,
+            "m_PathID": 0
+        }
+    ],
+    "Level_StartPos": [
+        {
+            "x": -2.5,
+            "y": 0.5
+        },
+        {
+            "x": -3.5,
+            "y": -2.0
+        },
+        {
+            "x": -2.5,
+            "y": -2.0
+        },
+        {
+            "x": -1.5,
+            "y": -2.0
+        },
+        {
+            "x": -0.5,
+            "y": -2.0
+        },
+        {
+            "x": 0.5,
+            "y": -2.0
+        },
+        {
+            "x": 1.5,
+            "y": -2.0
+        },
+        {
+            "x": 3.5,
+            "y": -2.0
+        },
+        {
+            "x": -6.0,
+            "y": -1.0
+        },
+        {
+            "x": -5.0,
+            "y": -1.0
+        },
+        {
+            "x": -4.0,
+            "y": -1.0
+        },
+        {
+            "x": -2.0,
+            "y": -1.0
+        },
+        {
+            "x": 1.0,
+            "y": -1.0
+        },
+        {
+            "x": 2.0,
+            "y": -1.0
+        },
+        {
+            "x": 3.0,
+            "y": -1.0
+        },
+        {
+            "x": 4.0,
+            "y": -1.0
+        },
+        {
+            "x": 6.0,
+            "y": -1.0
+        },
+        {
+            "x": 2.5,
+            "y": -1.0
+        },
+        {
+            "x": 6.5,
+            "y": 6.5
+        }
+    ],
+    "Level_EndPos": [
+        {
+            "x": -2.5,
+            "y": 0.5
+        },
+        {
+            "x": -2.5,
+            "y": -2.0
+        },
+        {
+            "x": -1.5,
+            "y": -2.0
+        },
+        {
+            "x": -0.5,
+            "y": -2.0
+        },
+        {
+            "x": 0.5,
+            "y": -2.0
+        },
+        {
+            "x": 1.5,
+            "y": -2.0
+        },
+        {
+            "x": 2.5,
+            "y": -2.0
+        },
+        {
+            "x": 2.5,
+            "y": -2.0
+        },
+        {
+            "x": -5.0,
+            "y": -1.0
+        },
+        {
+            "x": -4.0,
+            "y": -1.0
+        },
+        {
+            "x": -3.0,
+            "y": -1.0
+        },
+        {
+            "x": -3.0,
+            "y": -1.0
+        },
+        {
+            "x": 2.0,
+            "y": -1.0
+        },
+        {
+            "x": 3.0,
+            "y": -1.0
+        },
+        {
+            "x": 4.0,
+            "y": -1.0
+        },
+        {
+            "x": 5.0,
+            "y": -1.0
+        },
+        {
+            "x": 5.0,
+            "y": -1.0
+        },
+        {
+            "x": 2.5,
+            "y": -1.0
+        },
+        {
+            "x": 6.5,
+            "y": 6.5
+        }
+    ],
+    "Level_Mats": [
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)"
+    ],
+    "Level_ObjectName": [
+        "Player(Clone)",
+        "SignN1(Clone)"
+    ],
+    "Level_ObjPos": [
+        {
+            "x": -4.986972332000732,
+            "y": -0.41987794637680056
+        },
+        {
+            "x": 5.059127330780029,
+            "y": -0.1841021478176117
+        }
+    ]
+}

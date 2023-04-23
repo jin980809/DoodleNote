@@ -1,0 +1,518 @@
+{
+    "Level_Lines": [
+        {
+            "m_FileID": -32998,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33008,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33098,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33108,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33118,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33128,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33138,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33158,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33168,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33188,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33198,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33208,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33218,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33228,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33238,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33248,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33258,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33268,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33288,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33298,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33308,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33318,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33328,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33338,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33348,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33358,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33368,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33378,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33388,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33398,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33408,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33418,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33428,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33438,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33448,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33458,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33468,
+            "m_PathID": 0
+        },
+        {
+            "m_FileID": -33508,
+            "m_PathID": 0
+        }
+    ],
+    "Level_StartPos": [
+        {
+            "x": -1.5,
+            "y": 2.5
+        },
+        {
+            "x": -0.5,
+            "y": 2.5
+        },
+        {
+            "x": 1.5,
+            "y": 2.5
+        },
+        {
+            "x": -1.5,
+            "y": 2.5
+        },
+        {
+            "x": -1.5,
+            "y": 1.5
+        },
+        {
+            "x": -1.5,
+            "y": 0.5
+        },
+        {
+            "x": -1.5,
+            "y": -0.5
+        },
+        {
+            "x": -1.5,
+            "y": -3.0
+        },
+        {
+            "x": -1.5,
+            "y": -1.5
+        },
+        {
+            "x": 1.5,
+            "y": 2.5
+        },
+        {
+            "x": 1.5,
+            "y": 1.5
+        },
+        {
+            "x": 1.5,
+            "y": 0.5
+        },
+        {
+            "x": 1.5,
+            "y": -0.5
+        },
+        {
+            "x": 1.5,
+            "y": -1.5
+        },
+        {
+            "x": 1.5,
+            "y": -3.0
+        },
+        {
+            "x": -1.5,
+            "y": -3.0
+        },
+        {
+            "x": 1.5,
+            "y": -3.0
+        },
+        {
+            "x": -0.5,
+            "y": -3.0
+        },
+        {
+            "x": 2.5,
+            "y": 2.5
+        },
+        {
+            "x": 2.5,
+            "y": -3.0
+        },
+        {
+            "x": 2.5,
+            "y": 1.5
+        },
+        {
+            "x": 2.5,
+            "y": 0.5
+        },
+        {
+            "x": 2.5,
+            "y": -0.5
+        },
+        {
+            "x": 2.5,
+            "y": -1.5
+        },
+        {
+            "x": 2.5,
+            "y": -3.0
+        },
+        {
+            "x": 3.5,
+            "y": -3.0
+        },
+        {
+            "x": 4.5,
+            "y": -3.0
+        },
+        {
+            "x": 6.5,
+            "y": -3.0
+        },
+        {
+            "x": -2.5,
+            "y": -3.0
+        },
+        {
+            "x": -2.5,
+            "y": -2.0
+        },
+        {
+            "x": -2.5,
+            "y": -1.0
+        },
+        {
+            "x": -2.5,
+            "y": 0.0
+        },
+        {
+            "x": -2.5,
+            "y": 1.0
+        },
+        {
+            "x": -2.5,
+            "y": 2.5
+        },
+        {
+            "x": -2.5,
+            "y": 2.5
+        },
+        {
+            "x": -3.5,
+            "y": 2.5
+        },
+        {
+            "x": -4.5,
+            "y": 2.5
+        },
+        {
+            "x": -6.5,
+            "y": 2.5
+        }
+    ],
+    "Level_EndPos": [
+        {
+            "x": -0.5,
+            "y": 2.5
+        },
+        {
+            "x": 0.5,
+            "y": 2.5
+        },
+        {
+            "x": 0.5,
+            "y": 2.5
+        },
+        {
+            "x": -1.5,
+            "y": 1.5
+        },
+        {
+            "x": -1.5,
+            "y": 0.5
+        },
+        {
+            "x": -1.5,
+            "y": -0.5
+        },
+        {
+            "x": -1.5,
+            "y": -1.5
+        },
+        {
+            "x": -1.5,
+            "y": -2.0
+        },
+        {
+            "x": -1.5,
+            "y": -2.0
+        },
+        {
+            "x": 1.5,
+            "y": 1.5
+        },
+        {
+            "x": 1.5,
+            "y": 0.5
+        },
+        {
+            "x": 1.5,
+            "y": -0.5
+        },
+        {
+            "x": 1.5,
+            "y": -1.5
+        },
+        {
+            "x": 1.5,
+            "y": -2.0
+        },
+        {
+            "x": 1.5,
+            "y": -2.0
+        },
+        {
+            "x": -0.5,
+            "y": -3.0
+        },
+        {
+            "x": 0.5,
+            "y": -3.0
+        },
+        {
+            "x": 0.5,
+            "y": -3.0
+        },
+        {
+            "x": 2.5,
+            "y": 1.5
+        },
+        {
+            "x": 2.5,
+            "y": -2.0
+        },
+        {
+            "x": 2.5,
+            "y": 0.5
+        },
+        {
+            "x": 2.5,
+            "y": -0.5
+        },
+        {
+            "x": 2.5,
+            "y": -1.5
+        },
+        {
+            "x": 2.5,
+            "y": -2.0
+        },
+        {
+            "x": 3.5,
+            "y": -3.0
+        },
+        {
+            "x": 4.5,
+            "y": -3.0
+        },
+        {
+            "x": 5.5,
+            "y": -3.0
+        },
+        {
+            "x": 5.5,
+            "y": -3.0
+        },
+        {
+            "x": -2.5,
+            "y": -2.0
+        },
+        {
+            "x": -2.5,
+            "y": -1.0
+        },
+        {
+            "x": -2.5,
+            "y": 0.0
+        },
+        {
+            "x": -2.5,
+            "y": 1.0
+        },
+        {
+            "x": -2.5,
+            "y": 1.5
+        },
+        {
+            "x": -2.5,
+            "y": 1.5
+        },
+        {
+            "x": -3.5,
+            "y": 2.5
+        },
+        {
+            "x": -4.5,
+            "y": 2.5
+        },
+        {
+            "x": -5.5,
+            "y": 2.5
+        },
+        {
+            "x": -5.5,
+            "y": 2.5
+        }
+    ],
+    "Level_Mats": [
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackRoundLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackLine (Instance)",
+        "M_BlackRoundLine (Instance)"
+    ],
+    "Level_ObjectName": [
+        "Player(Clone)",
+        "SignN1(Clone)"
+    ],
+    "Level_ObjPos": [
+        {
+            "x": -5.647573947906494,
+            "y": 3.0655651092529299
+        },
+        {
+            "x": 5.665821552276611,
+            "y": -2.18056583404541
+        }
+    ]
+}

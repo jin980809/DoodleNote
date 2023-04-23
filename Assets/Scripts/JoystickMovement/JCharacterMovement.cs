@@ -20,7 +20,7 @@ public class JCharacterMovement : MonoBehaviour
         float Vert = joystick.GetComponent<Joystick>().Vertical;
 
 
-        if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert) && p.GetComponent<JCharacterController>().dir_up && joystick.GetComponent<Joystick>().is_click)
+        if (Vert > 0 && (-1 * Vert < Hori && Hori < Vert) && p.GetComponent<JCharacterController>().dir_up)
         {
             if ((p.GetComponent<JCharacterController>().is_left || p.GetComponent<JCharacterController>().is_right || p.GetComponent<JCharacterController>().is_side))
             {
@@ -30,7 +30,7 @@ public class JCharacterMovement : MonoBehaviour
                 }
             }
         }
-        else if (Vert < 0 && (-1 * Vert > Hori && Hori > Vert) && !p.GetComponent<JCharacterController>().dir_up && joystick.GetComponent<Joystick>().is_click)
+        else if (Vert < 0 && (-1 * Vert > Hori && Hori > Vert) && !p.GetComponent<JCharacterController>().dir_up)
         {
             if (p.GetComponent<JCharacterController>().is_left || p.GetComponent<JCharacterController>().is_right || p.GetComponent<JCharacterController>().is_side)
             {
@@ -40,7 +40,7 @@ public class JCharacterMovement : MonoBehaviour
                 }
             }
         }
-        else if (Hori < 0 && (-1 * Hori > Vert && Vert > Hori) && !p.GetComponent<JCharacterController>().dir_right && joystick.GetComponent<Joystick>().is_click)
+        else if (Hori < 0 && (-1 * Hori > Vert && Vert > Hori) && !p.GetComponent<JCharacterController>().dir_right)
         {
             if (p.GetComponent<JCharacterController>().is_up || p.GetComponent<JCharacterController>().is_down || p.GetComponent<JCharacterController>().is_side)
             {
@@ -50,7 +50,7 @@ public class JCharacterMovement : MonoBehaviour
                 }
             }
         }
-        else if (Hori > 0 && (-1 * Hori < Vert && Vert < Hori) && p.GetComponent<JCharacterController>().dir_right && joystick.GetComponent<Joystick>().is_click)
+        else if (Hori > 0 && (-1 * Hori < Vert && Vert < Hori) && p.GetComponent<JCharacterController>().dir_right)
         {
             if (p.GetComponent<JCharacterController>().is_up || p.GetComponent<JCharacterController>().is_down || p.GetComponent<JCharacterController>().is_side)
             {

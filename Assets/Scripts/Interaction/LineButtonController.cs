@@ -99,11 +99,12 @@ public class LineButtonController : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / duration);
-            lineToMove.SetPosition(0, Vector3.Slerp(startPosition, targetStart, t));
-            lineToMove.SetPosition(1, Vector3.Slerp(endPosition, targetEnd, t));
 
             S_pos = lineToMove.GetPosition(0);
             E_pos = lineToMove.GetPosition(1);
+
+            lineToMove.SetPosition(0, Vector3.Lerp(startPosition, targetStart, t));
+            lineToMove.SetPosition(1, Vector3.Lerp(endPosition, targetEnd, t));
 
             yield return null;
         }
