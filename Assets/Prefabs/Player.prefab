@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crayon_UI: {fileID: 0}
+  CC: {fileID: 9117561990523841843}
 --- !u!1 &9117561990434602751
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +551,7 @@ MonoBehaviour:
   is_walk: 0
   is_downline: 0
   Anim_End: 1
+  DownLinePos: {x: 0, y: 0, z: 0}
 --- !u!114 &9117561990523841842
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SideCheckTrigger : MonoBehaviour
 {
     [SerializeField] private CrayonUI Crayon_UI;
+    public JCharacterController CC;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class SideCheckTrigger : MonoBehaviour
     {
         if (other.CompareTag("OriginLine") || Crayon_UI.Line_tag.ToString() == other.tag)
         {
+            CC.DownLinePos = other.gameObject.GetComponent<LineRenderer>().GetPosition(0);
+
             GameObject.Find("Player").GetComponent<JCharacterController>().is_side = true;
         }
     }

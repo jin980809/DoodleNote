@@ -7,6 +7,7 @@ public class LineColorCheck : MonoBehaviour
 {
     public GameObject Crayon_UI;
 
+
     void Start()
     {
         //Crayon_UI = GameObject.Find("Crayon");
@@ -15,12 +16,12 @@ public class LineColorCheck : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("OriginLine"))
-        {
+        { 
             ButtonActive();
         }
         else
         {
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Crayon_UI.transform.GetChild(i + 1).GetComponent<Button>().interactable = false;
             }

@@ -27,6 +27,8 @@ public class JCharacterController : MonoBehaviour
     static private GameObject Joystick;
     static private GameObject P;
 
+    public Vector3 DownLinePos;
+
     Animator Anim;
 
     void Start()
@@ -433,15 +435,17 @@ public class JCharacterController : MonoBehaviour
                 is_down = false;
                 is_left = true;
                 dir_up = false;
+                this.transform.position = new Vector3(DownLinePos.x - 0.5f, t_pos.y, t_pos.z);
             }
             else if (!dir_right)
             {
                 is_down = false;
                 is_right = true;
                 dir_up = false;
+                this.transform.position = new Vector3(DownLinePos.x + 0.5f, t_pos.y, t_pos.z);
             }
 
-            this.transform.position = new Vector3((float)(Math.Round(t_pos.x * 100) / 100f), t_pos.y, t_pos.z);
+            //this.transform.position = new Vector3(DownLinePos.x - 0.5f, t_pos.y, t_pos.z);
         }
 
         else if (is_left)
@@ -451,14 +455,16 @@ public class JCharacterController : MonoBehaviour
                 is_left = false;
                 is_down = true;
                 dir_right = false;
+                this.transform.position = new Vector3(t_pos.x, DownLinePos.y - 0.5f, t_pos.z);
             }
             else if (!dir_up)
             {
                 is_left = false;
                 is_up = true;
                 dir_right = false;
+                this.transform.position = new Vector3(t_pos.x, DownLinePos.y + 0.5f, t_pos.z);
             }
-            this.transform.position = new Vector3(t_pos.x, (float)(Math.Round(t_pos.y * 100) / 100f), t_pos.z);
+            //this.transform.position = new Vector3(t_pos.x, (float)(Math.Round(t_pos.y * 100) / 100f), t_pos.z);
         }
 
         else if (is_right)
@@ -468,14 +474,16 @@ public class JCharacterController : MonoBehaviour
                 is_right = false;
                 is_down = true;
                 dir_right = true;
+                this.transform.position = new Vector3(t_pos.x, DownLinePos.y - 0.5f, t_pos.z);
             }
             else if (!dir_up)
             {
                 is_right = false;
                 is_up = true;
                 dir_right = true;
+                this.transform.position = new Vector3(t_pos.x, DownLinePos.y + 0.5f, t_pos.z);
             }
-           this.transform.position = new Vector3(t_pos.x, (float)(Math.Round(t_pos.y * 100) / 100f), t_pos.z);
+           
         }
 
         else if (is_up)
@@ -485,14 +493,18 @@ public class JCharacterController : MonoBehaviour
                 is_up = false;
                 is_left = true;
                 dir_up = true;
+                this.transform.position = new Vector3(DownLinePos.x - 0.5f, t_pos.y, t_pos.z);
             }
             else if (!dir_right)
             {
                 is_up = false;
                 is_right = true;
                 dir_up = true;
+                this.transform.position = new Vector3(DownLinePos.x + 0.5f, t_pos.y, t_pos.z);
             }
-            this.transform.position = new Vector3((float)(Math.Round(t_pos.x * 100) / 100f), t_pos.y, t_pos.z);
+            //this.transform.position = new Vector3((float)(Math.Round(t_pos.x * 100) / 100f), t_pos.y, t_pos.z);
+
+            Debug.Log(DownLinePos);
         }
         dontgo = false;
         Anim.SetBool("Is_Side", false);

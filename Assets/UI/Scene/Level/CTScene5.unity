@@ -580,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439776592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8451038, y: 0.5062937, z: -0.045006536}
+  m_LocalPosition: {x: 0.8451038, y: 0.5, z: -0.045006536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1558,6 +1558,17 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1602073364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9117561990523841843, guid: 72f62fb5b5f245c43a4e641a3f3d4e67, type: 3}
+  m_PrefabInstance: {fileID: 9117561990118908280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ea719993f503245887b2a2e302747a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1614330450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2259,6 +2270,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3455472133840707958, guid: 125e8debdc46a2142abd1a75b2976b46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3455472133840707958, guid: 125e8debdc46a2142abd1a75b2976b46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.61
+      objectReference: {fileID: 0}
     - target: {fileID: 5095243370258318385, guid: 125e8debdc46a2142abd1a75b2976b46, type: 3}
       propertyPath: m_Name
       value: SignN1
@@ -2487,9 +2506,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 9117561989244865527, guid: 72f62fb5b5f245c43a4e641a3f3d4e67, type: 3}
+      propertyPath: CC
+      value: 
+      objectReference: {fileID: 1602073364}
+    - target: {fileID: 9117561989244865527, guid: 72f62fb5b5f245c43a4e641a3f3d4e67, type: 3}
       propertyPath: Crayon_UI
       value: 
       objectReference: {fileID: 900589554}
+    - target: {fileID: 9117561989844650261, guid: 72f62fb5b5f245c43a4e641a3f3d4e67, type: 3}
+      propertyPath: CC
+      value: 
+      objectReference: {fileID: 1602073364}
     - target: {fileID: 9117561990523841846, guid: 72f62fb5b5f245c43a4e641a3f3d4e67, type: 3}
       propertyPath: m_RootOrder
       value: 7
