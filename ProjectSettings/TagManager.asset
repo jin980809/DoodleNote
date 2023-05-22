@@ -43,6 +43,8 @@ TagManager:
   - BLACK
   - LobbyRoad
   - Rides
+  - Star
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -86,14 +88,14 @@ TagManager:
   - name: BackObject
     uniqueID: 2187721599
     locked: 0
-  - name: Player
-    uniqueID: 2153205387
-    locked: 0
   - name: Object
     uniqueID: 1168643545
     locked: 0
   - name: Line
     uniqueID: 3507191977
+    locked: 0
+  - name: Player
+    uniqueID: 2153205387
     locked: 0
   - name: Crayon
     uniqueID: 3745366517

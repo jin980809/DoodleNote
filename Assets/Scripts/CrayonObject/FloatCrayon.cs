@@ -9,7 +9,7 @@ public class FloatCrayon: MonoBehaviour
 
     void Update()
     {
-        float y = transform.position.y + Mathf.Sin(Time.time * speed) * 0.0001f;
+        float y = transform.position.y + Mathf.Sin(Time.time * speed) * 0.001f;
         transform.position = new Vector3(transform.position.x, y, transform.position.z);
     }
 }

@@ -6,12 +6,16 @@ public class CharacterMovement : MonoBehaviour
 {
     public float Speed = 1.0f;
     private LineRenderer LR;
+    private LineRenderer Pre_LR;
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Line"))
         {
+            Pre_LR = LR;
             LR = other.gameObject.GetComponent<LineRenderer>();
+            Pre_LR.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
+            this.transform.position = LR.GetPosition(0);
         }
     }
 
