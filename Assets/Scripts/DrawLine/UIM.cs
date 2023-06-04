@@ -2,10 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// 필요한 UI에 즉시 접근하고 변경할 수 있도록 허용하는 UI 매니저
 public class UIM : MonoBehaviour
 {
-    // 싱글톤 접근용 프로퍼티
     public static UIM Instance
     {
         get
@@ -19,28 +17,44 @@ public class UIM : MonoBehaviour
         }
     }
 
-    private static UIM m_instance;
-
-
-    public Text scoreText; // 점수 표시용 텍스트
-    public GameObject gameoverUI; // 게임 오버시 활성화할 UI 
-    public Image hpBar; // HP를 표시할 UI의 Image 컴포넌트
-
-    // 점수 텍스트 갱신
-    public void UpdateScoreText(int newScore)
+    private void Awake()
     {
-        scoreText.text = "Score : " + newScore;
+        if (m_instance != null && m_instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        m_instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    // 게임 오버 UI 활성화
+    private static UIM m_instance;
+
+    public Text scoreText;
+    public GameObject gameoverUI;
+    public Image hpBar;
+    public Image feverBar;
+
     public void SetActiveGameoverUI(bool active)
     {
         gameoverUI.SetActive(active);
+    }
+
+    public void UpdateScoreText(int newScore)
+    {
+        scoreText.text = "Score : " + newScore;
     }
 
     public void UpdateHPBar(float currentHP, float maxHP)
     {
         float fillAmount = currentHP / maxHP;
         hpBar.fillAmount = fillAmount;
+    }
+
+    public void UpdateFeverBar(float currentFever, float maxFeverScore)
+    {
+        float fillAmount = currentFever / maxFeverScore;
+        feverBar.fillAmount = fillAmount;
     }
 }

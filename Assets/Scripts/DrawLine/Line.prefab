@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4794162980458824301}
   - component: {fileID: 7149684531873849778}
   - component: {fileID: 8805665103676273664}
+  - component: {fileID: 2760345902736969268}
   m_Layer: 0
   m_Name: Line
   m_TagString: Line
@@ -154,3 +155,17 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &2760345902736969268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6104153737614665408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f363ec5c311a0f4d8d00b1c9f1c73a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 7149684531873849778}
+  edgeCol: {fileID: 8805665103676273664}

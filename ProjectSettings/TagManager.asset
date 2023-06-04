@@ -43,8 +43,10 @@ TagManager:
   - BLACK
   - LobbyRoad
   - Rides
-  - Star
   - Potion
+  - MapStartArea
+  - BigPoint
+  - SmallPoint
   layers:
   - Default
   - TransparentFX
