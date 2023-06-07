@@ -62,7 +62,7 @@ public class LevelSelector : MonoBehaviour
             _levelSelectPanelObject.transform.SetSiblingIndex(0);
 
             int levelButtonCount = _levelSelectPanelObject.transform.GetChild(0).childCount;
-            int levelclearindex = DataManager.p_DataManager.GetLevelProgressData(_thema);
+            int levelclearindex = DataManager1.p_DataManager.GetLevelProgressData(_thema);
 
             int i = 0;
             for (i = 0; i < levelclearindex + 1; ++i)       //CurrentLevel

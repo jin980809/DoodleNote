@@ -17,7 +17,7 @@ public class OptionButton : CommonUIButton
     private GameObject _panelObject;
 
     // Start is called before the first frame update
-    protected void Start()
+    void Awake()
     {
         base.Start();
     }

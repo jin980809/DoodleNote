@@ -38,8 +38,8 @@ public class LevelManager : MonoBehaviour
     {
         ++_currentLevel;
 
-        DataManager.p_DataManager.SetLevelProgressData(EThema.AmusementPark, _currentLevel );
-        DataManager.p_DataManager.SaveData();
+        DataManager1.p_DataManager.SetLevelProgressData(EThema.AmusementPark, _currentLevel );
+        DataManager1.p_DataManager.SaveData();
 
         if (_currentLevel == 9)
         {

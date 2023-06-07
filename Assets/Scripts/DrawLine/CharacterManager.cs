@@ -137,4 +137,10 @@ public class CharacterManager : MonoBehaviour
     {
 
     }
+
+    public IEnumerator ReturnColorState()
+    {
+        yield return new WaitForSeconds(5f);
+        currentColor = ColorState.Origin;
+    }
 }

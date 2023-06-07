@@ -90,15 +90,18 @@ TagManager:
   - name: BackObject
     uniqueID: 2187721599
     locked: 0
+  - name: Player
+    uniqueID: 2153205387
+    locked: 0
   - name: Object
     uniqueID: 1168643545
     locked: 0
   - name: Line
     uniqueID: 3507191977
     locked: 0
-  - name: Player
-    uniqueID: 2153205387
-    locked: 0
   - name: Crayon
     uniqueID: 3745366517
+    locked: 0
+  - name: BackObject
+    uniqueID: 3539799387
     locked: 0

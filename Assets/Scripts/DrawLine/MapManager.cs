@@ -5,14 +5,14 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     public GameObject[] prefabList;
+
     public GameObject inst_prefab;
+
+    public List <GameObject> inst_prefabList;
     public Transform spawn_Point;
     private int randomIndex = -1;
 
-
-
     List<Vector2> points;
-
     public enum StageState
     {
         Amusement_Park = 0,
@@ -52,6 +52,10 @@ public class MapManager : MonoBehaviour
     //    DontDestroyOnLoad(gameObject);
     //}
 
+    private void Start()
+    {
+        inst_prefabList = new List<GameObject>(); 
+    }
 
     public void makeInstance()
     {
@@ -66,6 +70,14 @@ public class MapManager : MonoBehaviour
             randomIndex = Random.Range(0, prefabList.Length);
 
             inst_prefab = Instantiate(prefabList[randomIndex]);
+            inst_prefabList.Add(inst_prefab);
+
+            if(inst_prefabList.Count == 3)
+            {
+                Destroy(inst_prefabList[0]);
+                inst_prefabList.RemoveAt(0);
+            }
+
         }
     }
 

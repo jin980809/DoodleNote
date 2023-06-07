@@ -9,7 +9,7 @@ public class LevelProgressData
     public int _AmusementPark;
 }
 
-public class DataManager : MonoBehaviour
+public class DataManager1 : MonoBehaviour
 {
     private string _saveDataPath;
     private string _saveFileName = "LevelProgressSaveFile";
@@ -109,7 +109,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    public static DataManager p_DataManager
+    public static DataManager1 p_DataManager
     {
         get
         {
@@ -121,5 +121,5 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    private static DataManager _dataManager;
+    private static DataManager1 _dataManager;
 }

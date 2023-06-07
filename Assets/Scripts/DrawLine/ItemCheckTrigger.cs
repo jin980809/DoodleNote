@@ -55,18 +55,21 @@ public class ItemCheckTrigger : MonoBehaviour
         {
             Destroy(other.gameObject);
             CharacterManager.Instance.currentColor = CharacterManager.ColorState.Red;
+            StartCoroutine(CharacterManager.Instance.ReturnColorState());
         }
 
         else if (other.CompareTag("YellowCrayon"))
         {
             Destroy(other.gameObject);
             CharacterManager.Instance.currentColor = CharacterManager.ColorState.Yellow;
+            StartCoroutine(CharacterManager.Instance.ReturnColorState());
         }
 
         else if (other.CompareTag("BlueCrayon"))
         {
             Destroy(other.gameObject);
             CharacterManager.Instance.currentColor = CharacterManager.ColorState.Blue;
+            StartCoroutine(CharacterManager.Instance.ReturnColorState());
         }
 
         else if(other.CompareTag("MapStartArea"))
