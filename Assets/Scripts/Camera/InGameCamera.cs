@@ -5,7 +5,7 @@ public class InGameCamera : CommonUIButton
 {
     public InGameCameraController cameraController;
 
-    void Start()
+    void Awake()
     {
         base.Start();
     }

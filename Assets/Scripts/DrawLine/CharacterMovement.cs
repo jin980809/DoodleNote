@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float Speed = 1.0f;
+    public float FixSpeed = 3.0f;
+    private float Speed = 3.0f;
     private LineRenderer LR;
     private LineRenderer Pre_LR;
 
@@ -90,5 +91,17 @@ public class CharacterMovement : MonoBehaviour
         {
             target_Pos = new Vector3(LR.GetPosition(Curr_index + 1).x, LR.GetPosition(Curr_index + 1).y - 0.5f, 0);
         }
+    }
+
+    public void StopCharacter()
+    {
+        Anim.SetBool("is_Run", false);
+        Speed = 0;
+    }
+
+    public void RunCharacter()
+    {
+        Anim.SetBool("is_Run", true);
+        Speed = FixSpeed;
     }
 }
