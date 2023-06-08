@@ -10,10 +10,12 @@ public class UIManager : MonoBehaviour
     private FadeScreen _FadeScreen;
 
     [SerializeField]
-    private Canvas _canvas;
+    private Transform _canvas;
 
     [SerializeField]
     private string _currentThema;
+
+    private GameObject _inventoryPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +67,31 @@ public class UIManager : MonoBehaviour
         _FadeScreen.Fade(0.0f, 1.0f);
     }
 
+    public void InventoryActivate()
+    {
+        if(_inventoryPanel != null)
+        {
+            _inventoryPanel.SetActive(true);
+        }
+    }
+
+    public void InventoryUnActivate()
+    {
+        if (_inventoryPanel == null)
+        {
+            return;
+        }
+        else
+        {
+            _inventoryPanel.SetActive(false);
+        }
+    }
+
+    public AccessoryInventoryPanel GetInventoryPanel()
+    {
+        return _inventoryPanel.GetComponent<AccessoryInventoryPanel>();
+    }
+
     public bool IsFading()
     {
         return _FadeScreen.IsFading();
@@ -84,6 +111,17 @@ public class UIManager : MonoBehaviour
         set
         {
             _currentThema = value;
+        }
+    }
+    public AccessoryInventoryPanel p_AccessoryInventoryPanel
+    {
+        get
+        {
+            return _inventoryPanel.GetComponent<AccessoryInventoryPanel>();
+        }
+        set
+        {
+            _inventoryPanel = value.gameObject;
         }
     }
 
