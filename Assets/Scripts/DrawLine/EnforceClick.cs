@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class EnforceClick : MonoBehaviour
 {
     public Text EnforceHpTxt;
@@ -21,8 +21,11 @@ public class EnforceClick : MonoBehaviour
 
     private DataManager DM;
 
+    private OptionButton PRB_OB;
+
     void Start()
     {
+        PRB_OB = GameObject.Find("PlayReadyButton").GetComponent<OptionButton>();
         DM = DataManager.Instance;
         LoadText();
     }
@@ -98,8 +101,13 @@ public class EnforceClick : MonoBehaviour
         DM.charStat.TrasureMap++;
     }
 
-    void GameStartOnClick()
+    public void BackOnClick()
     {
+        PRB_OB.OnClick();
+    }
 
+    public void GameStartOnClick()
+    {
+        SceneManager.LoadScene("MapCreating");
     }
 }

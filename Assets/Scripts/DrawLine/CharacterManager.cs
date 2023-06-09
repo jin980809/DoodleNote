@@ -43,11 +43,14 @@ public class CharacterManager : MonoBehaviour
 
     public bool is_Up = true;
 
-    [SerializeField] private GameObject Character;
-
     public int Score = 0;
+    public float TMP_Drop_prob;
+    public float FeverTime;
 
+    [SerializeField] private GameObject Character;
     public StringBuilder Line_tag;
+
+    private DataManager DM;
 
     public enum ColorState
     {
@@ -67,6 +70,8 @@ public class CharacterManager : MonoBehaviour
         currentHP = maxHP; // 시작 시 최대 HP로 초기화
         Line_tag = new StringBuilder(System.Enum.GetName(typeof(CharacterColorState.ColorState), 0)); // 문제 발생 시 문자열을 딕셔너리로 캐싱하여 사용하기
         Line_tag.Append("Line");
+        DM = DataManager.Instance;
+        SetStat();
     }
 
     private void Update()
@@ -142,5 +147,12 @@ public class CharacterManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         currentColor = ColorState.Origin;
+    }
+
+    private void SetStat()
+    {
+        maxHP = int.Parse(DM.HP_List[DM.charStat.Hp]["Stat"].ToString());
+        FeverTime  = float.Parse(DM.Fever_List[DM.charStat.FeverTime]["Stat"].ToString());
+        TMP_Drop_prob = float.Parse(DM.TrasureMap_List[DM.charStat.TrasureMap]["Stat"].ToString());
     }
 }
