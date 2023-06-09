@@ -7,10 +7,10 @@ public class Ability_Stop : MonoBehaviour
     private Collider2D col;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("PlayerCol"))
         {
             col = collision;
-            collision.gameObject.GetComponent<CharacterMovement>().StopCharacter();
+            collision.gameObject.transform.parent.GetComponent<CharacterMovement>().StopCharacter();
             TimerManager.Instance.SetTimerOn();
         }
     }
@@ -19,7 +19,7 @@ public class Ability_Stop : MonoBehaviour
     {
         if (TimerManager.Instance.GetTime() >= 1.0f && col != null)
         {
-            col.gameObject.GetComponent<CharacterMovement>().RunCharacter();
+            col.gameObject.transform.parent.GetComponent<CharacterMovement>().RunCharacter();
 
             TimerManager.Instance.SetTimerOff();
             TimerManager.Instance.ResetTimer();
