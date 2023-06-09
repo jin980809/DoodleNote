@@ -19,20 +19,6 @@ TagManager:
   - GreenCrayon
   - BlueCrayon
   - PurpleCrayon
-  - M_BlackLine
-  - M_RedLine
-  - M_GreenLine
-  - M_BlueLine
-  - M_YellowLine
-  - M_OrangeLine
-  - M_PurpleLine
-  - M_BlackRoundLine
-  - M_RedRoundLine
-  - M_GreenRoundLine
-  - M_BlueRoundLine
-  - M_YellowRoundLine
-  - M_OrangeRoundLine
-  - M_PurpleRoundLine
   - RedLine
   - OriginLine
   - BlueLine
@@ -47,6 +33,7 @@ TagManager:
   - MapStartArea
   - BigPoint
   - SmallPoint
+  - PlayerCol
   layers:
   - Default
   - TransparentFX
