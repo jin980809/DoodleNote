@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/UI/Scene/StoryBoardScene.unity
     guid: 30f82941e4ef5394cb3a111ac78988f8
   - enabled: 1
     path: Assets/UI/Scene/TitleScene.unity
     guid: 1c114d85e498dfb4880f172e97380dde
-  - enabled: 1
-    path: Assets/UI/Scene/LobbyScene.unity
-    guid: 6f785036cc06be248a8b0dc25a649eb2
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/UI/Scene/Level/CTScene0.unity
     guid: bdd69b5f5cefd674e91e206076197491
@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapCreating.unity
     guid: 3edf94e847a2ff3479d584518aa3ee07
+  - enabled: 1
+    path: Assets/UI/Scene/LobbyScene.unity
+    guid: c9f3abab3bacf0c48af3f4deb036ee25
   m_configObjects: {}

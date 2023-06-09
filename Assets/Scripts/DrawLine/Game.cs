@@ -21,17 +21,17 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+    //private void Awake()
+    //{
+    //    if (instance != null && instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
 
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    //    instance = this;
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     public void CharacterDead()
     {
@@ -42,7 +42,11 @@ public class Game : MonoBehaviour
             characterMovement.enabled = false;
         }
         cameraFollow.enabled = false;
+        BackGround.Instance.Curr_BackGround.GetComponent<BackGroundMove>().enabled = false;
 
         UIM.Instance.SetActiveGameoverUI(true);
+
+        UIM.Instance.gameoverUI.GetComponent<GameOver>().Score.text = (CharacterManager.Instance.Score).ToString();
+        UIM.Instance.gameoverUI.GetComponent<GameOver>().TMPScore.text = "X " + CharacterManager.Instance.TMP;
     }
 }

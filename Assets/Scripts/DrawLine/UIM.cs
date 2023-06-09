@@ -17,17 +17,17 @@ public class UIM : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        if (m_instance != null && m_instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+    //private void Awake()
+    //{
+    //    if (m_instance != null && m_instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
 
-        m_instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    //    m_instance = this;
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     private static UIM m_instance;
 

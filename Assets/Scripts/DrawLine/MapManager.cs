@@ -12,6 +12,11 @@ public class MapManager : MonoBehaviour
     public Transform spawn_Point;
     private int randomIndex = -1;
 
+    public int MapCount = 0;
+    private int CurrentStageIndex = 0;
+
+    public List<int> StageMapCount; // 놀이공원, 과자나라, 해변가, 우주 순
+
     List<Vector2> points;
     public enum StageState
     {
@@ -25,20 +30,20 @@ public class MapManager : MonoBehaviour
 
     public StageState currentStage;
 
-    //private static MapManager m_instance;
+    private static MapManager m_instance;
 
-    //public static MapManager Instance
-    //{
-    //    get
-    //    {
-    //        if (m_instance == null)
-    //        {
-    //            m_instance = FindObjectOfType<MapManager>();
-    //        }
+    public static MapManager Instance
+    {
+        get
+        {
+            if (m_instance == null)
+            {
+                m_instance = FindObjectOfType<MapManager>();
+            }
 
-    //        return m_instance;
-    //    }
-    //}
+            return m_instance;
+        }
+    }
 
     //private void Awake()
     //{
@@ -59,6 +64,8 @@ public class MapManager : MonoBehaviour
 
     public void makeInstance()
     {
+        MapCount++;
+        MapChange();
         SpawnRandomPrefab();
         LineMove();
     }
@@ -113,5 +120,27 @@ public class MapManager : MonoBehaviour
 
         spawn_Point.position = inst_prefab.transform.GetChild(1).gameObject.transform.position;
 
+    }
+    public void MapChange()
+    {
+        if (MapCount == StageMapCount[(int)currentStage])
+        {
+            if (System.Enum.GetValues(typeof(StageState)).Length - 1 == (int)currentStage)
+            {
+                CurrentStageIndex = 0;
+            }
+            else
+            {
+                CurrentStageIndex++;
+            }
+
+            currentStage = (StageState)CurrentStageIndex;
+            MapCount = 0;
+            BackGround.Instance.SpawnBackGround();
+
+
+        }
+        else
+            return;
     }
 }

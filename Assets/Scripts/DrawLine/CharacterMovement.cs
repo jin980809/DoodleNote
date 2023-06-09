@@ -22,7 +22,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (other.CompareTag("Line") || CharacterManager.Instance.Line_tag.ToString() == other.tag)
         {
-
+            Debug.Log(CharacterManager.Instance.Line_tag.ToString());
             Pre_LR = LR;
             Curr_index = 0;
             LR = other.gameObject.GetComponent<LineRenderer>();

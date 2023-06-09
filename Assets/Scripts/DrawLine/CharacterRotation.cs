@@ -11,7 +11,7 @@ public class CharacterRotation : MonoBehaviour
     private int Curr_index = 0;
 
     private CharacterMovement CM;
-
+    private float y_rot;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,7 +32,7 @@ public class CharacterRotation : MonoBehaviour
         L_End_pos = LR.GetPosition(Curr_index + 1);
     }
 
-    
+
     void Update()
     {
         int Ci = CM.Curr_index;
@@ -44,14 +44,27 @@ public class CharacterRotation : MonoBehaviour
 
         //this.transform.rotation = Quaternion.AngleAxis(m_fDegree, Vector3.forward);
 
-        if(CharacterManager.Instance.is_Up)
+        if (L_Start_pos.x > L_End_pos.x)
         {
-            this.transform.eulerAngles = new Vector3(0f, 0f, m_fDegree);
+            y_rot = 180.0f;
+            //CharacterManager.Instance.is_Up = false;
         }
-        else if(!CharacterManager.Instance.is_Up)
+        else
         {
-            this.transform.eulerAngles = new Vector3(-180.0f, 0f, -m_fDegree);
+            y_rot = 0;
+            //CharacterManager.Instance.is_Up = true;
         }
+
+        if (CharacterManager.Instance.is_Up)
+        {
+            this.transform.eulerAngles = new Vector3(0f, y_rot, m_fDegree);
+        }
+        else if (!CharacterManager.Instance.is_Up)
+        {
+            this.transform.eulerAngles = new Vector3(-180.0f, y_rot, -m_fDegree);
+        }
+
+
 
         //Debug.Log(m_fDegree);
     }

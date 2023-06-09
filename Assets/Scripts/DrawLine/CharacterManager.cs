@@ -19,33 +19,34 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        if (m_instance != null && m_instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+    //private void Awake()
+    //{
+    //    if (m_instance != null && m_instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
 
-        m_instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    //    m_instance = this;
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     private static CharacterManager m_instance;
 
 
-    public float maxHP = 100f; // 최대 HP
+    public float maxHP = 100; // 최대 HP
     public float currentHP; // 현재 HP
     public float hpDecreaseRate = 2f; // HP 감소 속도
 
-    public float maxFever = 1200f; 
-    public float currentFever; 
+    public float maxFever = 1200f;
+    public float currentFever = 0; // 피버 게이지
+    public float TMP = 0; // 보물지도 개수
 
     public bool is_Up = true;
 
     public int Score = 0;
-    public float TMP_Drop_prob;
-    public float FeverTime;
+    public float TMP_Drop_prob; //보물지도 조각 드랍 확률
+    public float FeverTime; // 피버타임 지속 시간
 
     [SerializeField] private GameObject Character;
     public StringBuilder Line_tag;
@@ -69,7 +70,7 @@ public class CharacterManager : MonoBehaviour
         UIM.Instance.SetActiveGameoverUI(false);
         currentHP = maxHP; // 시작 시 최대 HP로 초기화
         Line_tag = new StringBuilder(System.Enum.GetName(typeof(CharacterColorState.ColorState), 0)); // 문제 발생 시 문자열을 딕셔너리로 캐싱하여 사용하기
-        Line_tag.Append("Line");
+
         DM = DataManager.Instance;
         SetStat();
     }
@@ -89,7 +90,7 @@ public class CharacterManager : MonoBehaviour
 
         UIM.Instance.UpdateScoreText(Score);
 
-        if(currentFever >= maxFever)
+        if (currentFever >= maxFever)
         {
             currentFever = 0f;
             //GoFeverScene(); // 피버게이지가 다 차면 피버 씬으로 이동
@@ -134,7 +135,7 @@ public class CharacterManager : MonoBehaviour
 
     private void make_Linetag(int index)
     {
-        Line_tag = new StringBuilder(System.Enum.GetName(typeof(CharacterManager.ColorState), index)); // 문제 발생 시 문자열을 딕셔너리로 캐싱하여 사용하기
+        Line_tag = new StringBuilder(System.Enum.GetName(typeof(CharacterManager.ColorState), index));
         Line_tag.Append("Line");
     }
 
@@ -152,7 +153,7 @@ public class CharacterManager : MonoBehaviour
     private void SetStat()
     {
         maxHP = int.Parse(DM.HP_List[DM.charStat.Hp]["Stat"].ToString());
-        FeverTime  = float.Parse(DM.Fever_List[DM.charStat.FeverTime]["Stat"].ToString());
+        FeverTime = float.Parse(DM.Fever_List[DM.charStat.FeverTime]["Stat"].ToString());
         TMP_Drop_prob = float.Parse(DM.TrasureMap_List[DM.charStat.TrasureMap]["Stat"].ToString());
     }
 }

@@ -81,6 +81,7 @@ public class ItemCheckTrigger : MonoBehaviour
         {
             CF.enabled = true;
             LC.enabled = true;
+            BackGround.Instance.Curr_BackGround.GetComponent<BackGroundMove>().enabled = true;
         }
     }
 }
