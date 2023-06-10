@@ -156,4 +156,9 @@ public class CharacterManager : MonoBehaviour
         FeverTime = float.Parse(DM.Fever_List[DM.charStat.FeverTime]["Stat"].ToString());
         TMP_Drop_prob = float.Parse(DM.TrasureMap_List[DM.charStat.TrasureMap]["Stat"].ToString());
     }
+
+    public void SetDamage(float damage)
+    {
+        currentHP -= damage;
+    }
 }

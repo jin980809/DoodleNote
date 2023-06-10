@@ -17,7 +17,6 @@ public class CharacterMovement : MonoBehaviour
 
     Animator Anim;
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Line") || CharacterManager.Instance.Line_tag.ToString() == other.tag)
@@ -102,6 +101,16 @@ public class CharacterMovement : MonoBehaviour
     public void RunCharacter()
     {
         Anim.SetBool("is_Run", true);
+        Speed = FixSpeed;
+    }
+
+    public void SetCharacterSpeed(float speed)
+    {
+        Speed = speed;
+    }
+
+    public void InitCharacterSpeed()
+    {
         Speed = FixSpeed;
     }
 }

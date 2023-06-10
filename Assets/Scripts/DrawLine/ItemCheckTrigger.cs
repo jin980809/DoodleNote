@@ -83,5 +83,17 @@ public class ItemCheckTrigger : MonoBehaviour
             LC.enabled = true;
             BackGround.Instance.Curr_BackGround.GetComponent<BackGroundMove>().enabled = true;
         }
+
+        if (!other.gameObject.CompareTag("Enemy")) return;
+        for (int i = 0; i < DamageManager.Instance.enemy.Count; i++)
+        {
+
+            if (other.gameObject.name.ToString() + " (UnityEngine.GameObject)" == DamageManager.Instance.enemy[i].enemy.ToString())
+            {
+                CharacterManager.Instance.SetDamage(DamageManager.Instance.enemy[i].enemy_damage);
+                break;
+            }
+        }
     }
+
 }
