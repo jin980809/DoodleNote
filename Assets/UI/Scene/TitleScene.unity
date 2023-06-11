@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ea10a24b353a645bd472f558e33fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canvas: {fileID: 554072191}
+  _canvas: {fileID: 554072192}
   _currentThema: 
 --- !u!4 &48245521
 Transform:

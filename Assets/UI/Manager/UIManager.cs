@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private string _currentThema;
 
-    private GameObject _inventoryPanel;
+    public GameObject _inventoryPanel;
 
     // Start is called before the first frame update
     void Start()

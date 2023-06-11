@@ -116,7 +116,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 5634950780332192657}
   m_OnClick:
     m_PersistentCalls:
@@ -526,7 +526,7 @@ MonoBehaviour:
   _itemPanel: {fileID: 7119252264222257824}
   _itemSlotInstance: {fileID: 5918774679857145363, guid: b57a8829e35dfa246a7a8346ffc73093, type: 3}
   _customizingCharacter: {fileID: 7463166652775969958}
-  _canvas: {fileID: 0}
+  _inventory: {fileID: 0}
 --- !u!1 &7119252265454400126
 GameObject:
   m_ObjectHideFlags: 0

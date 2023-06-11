@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 target_Pos;
     private Vector3 char_Pos;
 
+    public bool is_Stop = false;
+
     Animator Anim;
 
 
@@ -63,10 +65,12 @@ public class CharacterMovement : MonoBehaviour
         if(this.transform.position == target_Pos && Curr_index == LR.positionCount - 2)
         {
             Anim.SetBool("is_Run", false);
+            is_Stop = true;
         }
         else
         {
             Anim.SetBool("is_Run", true);
+            is_Stop = false;
         }
 
         if (this.transform.position == target_Pos && Curr_index < LR.positionCount - 2)

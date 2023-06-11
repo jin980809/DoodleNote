@@ -79,7 +79,7 @@ public class MapManager : MonoBehaviour
             inst_prefab = Instantiate(prefabList[randomIndex]);
             inst_prefabList.Add(inst_prefab);
 
-            if(inst_prefabList.Count == 3)
+            if(inst_prefabList.Count == 4)
             {
                 Destroy(inst_prefabList[0]);
                 inst_prefabList.RemoveAt(0);
@@ -97,7 +97,7 @@ public class MapManager : MonoBehaviour
             GameObject child = inst_prefab.transform.GetChild(i).gameObject;
             //Debug.Log(child);
 
-            if (child.CompareTag("Line"))
+            if (child.CompareTag("Line") || child.CompareTag("RedLine") || child.CompareTag("YellowLine") || child.CompareTag("BlueLine"))
             {
                 LineRenderer LR = child.GetComponent<LineRenderer>();
                 EdgeCollider2D EC = child.GetComponent<EdgeCollider2D>();
